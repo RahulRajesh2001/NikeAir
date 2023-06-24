@@ -1,0 +1,29 @@
+{
+  "name": "nikeair",
+  "version": "1.0.0",
+  "description": "This is a nike shoes online shop",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulRajesh2001/NikeAir.git"
+  },
+  "author": "Rahul Rajesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahulRajesh2001/NikeAir/issues"
+  },
+  "homepage": "https://github.com/RahulRajesh2001/NikeAir#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^2.0.22"
+  }
+}
