@@ -1,0 +1,9 @@
+.navbar-white {
+    background-color: white;
+    border-bottom: 1px solid #EEEEEE ;
+  }
+  
+  .navbar-white .nav-link {
+    color: black;
+  }
+  
