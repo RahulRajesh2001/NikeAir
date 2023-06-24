@@ -90,7 +90,6 @@ const [product, setProduct]=useState({});
             <ListGroupItem>
               <Rating
                 value={product.rating}
-                text={`${product.numReviews} reviews`}
               />
             </ListGroupItem>
             <ListGroupItem>{product.description}</ListGroupItem>
@@ -100,7 +99,7 @@ const [product, setProduct]=useState({});
               <Row>
                 <Col>Price:</Col>
                 <Col>
-                  <strong>${product.price}</strong>
+                  <strong>₹{product.price}</strong>
                 </Col>
               </Row>
             </ListGroup.Item>
