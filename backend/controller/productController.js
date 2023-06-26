@@ -1,5 +1,5 @@
 import asyncHandler from "../middleware/asyncHandler.js";
-import Product from "../models/nikeShoesModel.js"
+import Product from "../models/nikeShoesModel.js";
 
 
 //fetch all products
