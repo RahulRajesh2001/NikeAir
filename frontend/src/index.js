@@ -15,6 +15,8 @@ import reportWebVitals from './reportWebVitals'
 import HomeScreen from './screens/HomeScreen'
 import ProductDetailScreen from './screens/ProductDetailScreen';
 import LoginScreen from './screens/LoginScreen';
+import Development from '../src/components/Development/Development'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route  path='/product/:id' element={<ProductDetailScreen />} />
       <Route  path='/login' element={<LoginScreen />} />
+      <Route  path='/dev' element={<Development />} />
     </Route>
   )
 )

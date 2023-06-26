@@ -6,4 +6,6 @@
   .navbar-white .nav-link {
     color: black;
   }
-  
+  .bold-link {
+    font-weight: bold;
+  }

@@ -15,34 +15,40 @@ console.log("logout")
     <header>
       <Navbar expand='lg' collapseOnSelect className='navbar-white'>
         <Container>
-          <LinkContainer to='/'>
-            <Navbar.Brand>NIKE</Navbar.Brand>
-          </LinkContainer>
+        <LinkContainer to='/'>
+  <Navbar.Brand>
+    <img src="https://cdn.wallpapersafari.com/98/5/78E3Lg.jpg" alt="Nike Logo" style={{ width: '50px', height: '50px' }} /> 
+  </Navbar.Brand>
+</LinkContainer>
+
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='mx-auto'>
-              <LinkContainer to='/cart'>
-                <Nav.Link>MAN</Nav.Link>
+              <LinkContainer to='/dev'>
+                <Nav.Link  className='bold-link'>MAN</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/'>
-                <Nav.Link>WOMEN</Nav.Link>
+              <LinkContainer to='/dev'>
+                <Nav.Link className='bold-link'>WOMEN</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/'>
-                <Nav.Link>KIDS</Nav.Link>
+              <LinkContainer to='/dev'>
+                <Nav.Link className='bold-link'>KIDS</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/'>
-                <Nav.Link>COLLECTIONS</Nav.Link>
+              <LinkContainer to='/dev'>
+                <Nav.Link className='bold-link'>COLLECTIONS</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/'>
-                <Nav.Link>CONTACT</Nav.Link>
+              <LinkContainer to='/dev'>
+                <Nav.Link className='bold-link'>CONTACT</Nav.Link>
               </LinkContainer>
             </Nav>
 
             <Nav className='ms-auto'>
               <LinkContainer to='/'>
-                <Nav.Link>SEARCH</Nav.Link>
+                <Nav.Link className='bold-link'>SEARCH</Nav.Link>
               </LinkContainer>
-              {userInfo ? (
+              <LinkContainer to='/dev'>
+                <Nav.Link className='bold-link'>CART</Nav.Link>
+              </LinkContainer>
+              {/* {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
                  <NavDropdown.Item onClick={logoutHandler}>
                   LOGOUT
@@ -50,7 +56,7 @@ console.log("logout")
                 </NavDropdown>
               ) : (<LinkContainer to='/login'>
                 <Nav.Link>LOGIN</Nav.Link>
-              </LinkContainer>)}
+              </LinkContainer>)} */}
               
             </Nav>
           </Navbar.Collapse>

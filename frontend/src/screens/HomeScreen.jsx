@@ -10,6 +10,7 @@ const {data:products, isLoading,error}=useGetProductsQuery();
 
   return (
     <>
+    <strong>Man Shoes</strong>
     {isLoading ? (<h2>Loading...</h2>) : error ? (<div>{error?.data?.message || error.error}</div>) : (<>
     <Row>
     {products.map((product) => (
