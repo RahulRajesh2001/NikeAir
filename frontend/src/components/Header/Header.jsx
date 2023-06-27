@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import '../Header/header.css'
 import { LinkContainer } from 'react-router-bootstrap';
 import {useSelector} from 'react-redux';
+import SearchBox from '../SearchBox/SearchBox';
 
 const Header = () => {
   const {userInfo} = useSelector ((state)=> state.auth);
@@ -42,9 +43,7 @@ console.log("logout")
             </Nav>
 
             <Nav className='ms-auto'>
-              <LinkContainer to='/'>
-                <Nav.Link className='bold-link'>SEARCH</Nav.Link>
-              </LinkContainer>
+              <SearchBox/>
               <LinkContainer to='/dev'>
                 <Nav.Link className='bold-link'>CART</Nav.Link>
               </LinkContainer>
