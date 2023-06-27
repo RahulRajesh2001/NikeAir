@@ -1,7 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
-import '../Header/header.css'
+import '../Header/header.css';
+import { FaUser } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import {useSelector,useDispatch} from 'react-redux';
 import SearchBox from '../SearchBox/SearchBox';
@@ -39,6 +40,9 @@ console.log(error);
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='mx-auto'>
+            <LinkContainer to='/home'>
+                <Nav.Link  className='bold-link'>HOME</Nav.Link>
+              </LinkContainer>
               <LinkContainer to='/login'>
                 <Nav.Link  className='bold-link'>MAN</Nav.Link>
               </LinkContainer>
@@ -60,13 +64,11 @@ console.log(error);
               <LinkContainer to='/dev'>
                 <Nav.Link className='bold-link'>CART</Nav.Link>
               </LinkContainer>
-            {userInfo ? (
-              <NavDropdown title={userInfo.name} id='username'>
+            {userInfo ? (<NavDropdown title={<FaUser />} id='username'>
                 <LinkContainer to='/logout'>
                   <NavDropdown.Item onClick={logoutHandler}>LOGOUT</NavDropdown.Item>
                 </LinkContainer>
-              </NavDropdown>
-            ) : (  <LinkContainer to='/login'>
+              </NavDropdown>):(<LinkContainer to='/login'>
               <Nav.Link href='/login'>
                 SIGN IN
               </Nav.Link>

@@ -17,11 +17,13 @@ import ProductDetailScreen from './screens/ProductDetailScreen';
 import LoginScreen from './screens/LoginScreen';
 import Development from '../src/components/Development/Development'
 import RegisterScreen from './screens/RegisterScreen';
+import LandingPage from '../src/components/LandingPage/LandingPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
-      <Route index={true} path='/' element={<HomeScreen />} />
+      <Route index={true} path='/' element={<LandingPage/>} />
+      <Route  path='/home' element={<HomeScreen />} />
       <Route  path='/search/:keyword' element={<HomeScreen />} />
       <Route  path='/product/:id' element={<ProductDetailScreen />} />
       <Route  path='/login' element={<LoginScreen />} />
