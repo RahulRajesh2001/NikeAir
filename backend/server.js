@@ -23,8 +23,8 @@ app.get('/',(req,res)=>{
     res.send("APi is running...")
 })
 
-app.use('/api/products',productRoutes);
-app.use('/api/user',userRoutes);
+app.use('/api/products',productRoutes); 
+app.use('/api/users',userRoutes);
 
 
 
