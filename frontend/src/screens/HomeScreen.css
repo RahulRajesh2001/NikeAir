@@ -1,0 +1,46 @@
+/* HomeScreen.css */
+
+/* Filter Panel */
+.filter-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  h3{
+font-weight: bold;
+  }
+  
+  .filter-panel-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-panel h4 {
+    margin-bottom: 10px;
+  }
+  
+  /* Filter Button */
+  #categoryDropdown {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #212529;
+  }
+  
+  /* Checkboxes */
+  .form-check-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-check-input {
+    margin-top: 2px;
+  }
+  

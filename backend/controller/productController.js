@@ -1,16 +1,14 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/nikeShoesModel.js";
 
+// Fetch all products
+export const getProducts = asyncHandler(async (req, res) => {
+  const keyword = req.query.keyword ? { name: { $regex: req.query.keyword, $options: "i" } } : {};
+  const category = req.query.category ? { category: req.query.category } : {};
 
-//fetch all products
-export const getProducts =asyncHandler(async(req,res)=>{
-
-  //search feature
-  const keyword = req.query.keyword ? {name : {$regex : req.query.keyword , $options: 'i'}} : {};
-  
-    const products=await Product.find({...keyword});
-    res.json(products);
-})
+  const products = await Product.find({ ...keyword, ...category });
+  res.json(products);
+});
 
 //fetch a single product
 export const getProductById =asyncHandler(async(req,res)=>{
