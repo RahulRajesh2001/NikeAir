@@ -17,7 +17,7 @@ import ProductDetailScreen from './screens/ProductDetailScreen';
 import LoginScreen from './screens/LoginScreen';
 import Development from '../src/components/Development/Development'
 import RegisterScreen from './screens/RegisterScreen';
-import LandingPage from '../src/components/LandingPage/LandingPage'
+import LandingPage from './components/LandingPage/LandingPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
